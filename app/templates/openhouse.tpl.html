@@ -1,0 +1,16 @@
+<h1>AngularJS Directive Demo</h1>
+
+<form role="form">
+  <div class="form-group">
+    <label>Search Twitter</label>
+    <input type="text" class="form-control" placeholder="Enter Search Terms" ng-model="query">
+  </div>
+</form>
+<div class="col-md-8">
+	<h3>Query Results <span ng-show="query">for "{{query}}"</span></h3>
+	<card status="status" ng-repeat="status in results"/>
+</div>
+<div class="col-md-4">
+	<h3>#AngularJS</h3>
+	<card mini="true" status="status" ng-repeat="status in angularJsResults"/>
+</div>
