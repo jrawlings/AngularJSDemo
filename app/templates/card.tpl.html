@@ -5,6 +5,8 @@
 			<span class="name" ng-bind="status.user.name"></span>
 			<span class="screen-name"><a ng-bind="'@'+status.user.screen_name" ng-href="https://www.twitter.com/{{status.user.screen_name}}"></a></span>
 		</div>
-		<div class="col-md-12 text" ng-bind="status.text"/>
+		<div class="col-md-12 text" ng-bind="status.text"></div>
+		<div class="col-md-12"><hr></div>
+		<div class="col-md-12 footer" ng-bind="status.created_at | date"></div>
 	</div>
 </div>
