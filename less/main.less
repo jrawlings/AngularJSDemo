@@ -1,6 +1,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/css/bootstrap.css');
 
 @light-grey: #D3D3D3;
+@dark-grey: #A9A9A9;
 @card-padding: 5px;
 @card-margin: 5px;
 @card-content-padding: 50px;
@@ -39,7 +40,15 @@
 		}
 
 		.footer {
-			color: @light-grey;
+
+			color: @dark-grey;
+
+			.count {
+				font-weight: bold;
+			}
+			.count-title {
+				color: @light-grey;
+			}
 		}
 	}
 

@@ -7,6 +7,10 @@
 		</div>
 		<div class="col-md-12 text" ng-bind="status.text"></div>
 		<div class="col-md-12"><hr></div>
-		<div class="col-md-12 footer" ng-bind="status.created_at | date"></div>
+		<div class="col-md-12 footer">
+            <span class="date" ng-bind="status.created_at | date"></span> |
+            <span class="count-container"><span class="count">{{status.retweet_count}}</span> <span class="count-title">RETWEETS</span></span> |
+            <span class="count-container"><span class="count">{{status.favorite_count}}</span> <span class="count-title">FAVORITES</span></span>
+        </div>
 	</div>
 </div>
