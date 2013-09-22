@@ -1,14 +1,14 @@
-'use strict';
+angular.module('openhouse').controller('OpenHouseCtrl', ['$scope', 'Twitter', function ($scope, Twitter) {
 
-angular.module('openhouse').controller('OpenHouseCtrl', ['$scope', 'Twitter', ($scope, Twitter) => {
+    'use strict';
 
-	$scope.angularJsResults = Twitter.query('#angularjs');
+    $scope.angularJsResults = Twitter.query('#angularjs');
 
-	var executeDebouncedQuery = _.debounce(query => {
-		$scope.results = Twitter.query(query);
-	}, 500);
+    var executeDebouncedQuery = _.debounce(function (query) {
+        $scope.results = Twitter.query(query);
+    }, 500);
 
-	$scope.$watch('query', query => {
-		query && executeDebouncedQuery(query);
-	});
+    $scope.$watch('query', function (query) {
+        query && executeDebouncedQuery(query);
+    });
 }]);

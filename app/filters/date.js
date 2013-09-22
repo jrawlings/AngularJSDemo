@@ -1,5 +1,8 @@
-'use strict';
+angular.module('openhouse').filter('date', [function () {
 
-angular.module('openhouse').filter('date', [() => {
-	return input => input.substring(0, input.indexOf('+')-1);
+    'use strict';
+
+    return function (input) {
+        return input.substring(0, input.indexOf('+') - 1);
+    };
 }]);

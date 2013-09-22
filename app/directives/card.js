@@ -1,13 +1,14 @@
-'use strict';
+angular.module('openhouse').directive('card', [function () {
 
-angular.module('openhouse').directive('card', [() => {
-	return {
-		restrict: 'E',
-		replace: true,
-		scope: {
-			status: '=',
-			mini: '@'
-		},
-		templateUrl: 'app/templates/card.tpl.html'
-	}
+    'use strict';
+
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: {
+            status: '=',
+            mini: '@'
+        },
+        templateUrl: 'app/templates/card.tpl.html'
+    };
 }]);
