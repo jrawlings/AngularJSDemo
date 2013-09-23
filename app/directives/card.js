@@ -6,8 +6,7 @@ angular.module('openhouse').directive('card', [function () {
         restrict: 'E',
         replace: true,
         scope: {
-            status: '=',
-            mini: '@'
+            status: '='
         },
         templateUrl: 'app/templates/card.tpl.html'
     };

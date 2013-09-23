@@ -1,16 +1,28 @@
-<div class="card clearfix" ng-class="{mini:mini}">
-	<span class="profile-image"><img src="{{status.user.profile_image_url}}"></img></span>
+<div class="card clearfix">
+	<span class="profile-image">
+    <img src="{{status.user.profile_image_url}}"></img>
+  </span>
 	<div class="status">
 		<div class="col-md-12 title">
 			<span class="name" ng-bind="status.user.name"></span>
-			<span class="screen-name"><a ng-bind="'@'+status.user.screen_name" ng-href="https://www.twitter.com/{{status.user.screen_name}}"></a></span>
+			<span class="screen-name">
+        <a ng-bind="'@'+status.user.screen_name" 
+           ng-href="https://www.twitter.com/{{status.user.screen_name}}">
+         </a>
+      </span>
 		</div>
 		<div class="col-md-12 text" ng-bind="status.text"></div>
 		<div class="col-md-12"><hr></hr></div>
 		<div class="col-md-12 footer">
             <span class="date" ng-bind="status.created_at | date"></span> |
-            <span class="count-container"><span class="count">{{status.retweet_count}}</span> <span class="count-title">RETWEETS</span></span> |
-            <span class="count-container"><span class="count">{{status.favorite_count}}</span> <span class="count-title">FAVORITES</span></span>
+            <span class="count-container">
+              <span class="count">{{status.retweet_count}}</span> 
+              <span class="count-title">RETWEETS</span>
+            </span> |
+            <span class="count-container">
+              <span class="count">{{status.favorite_count}}</span> 
+              <span class="count-title">FAVORITES</span>
+            </span>
         </div>
 	</div>
 </div>
